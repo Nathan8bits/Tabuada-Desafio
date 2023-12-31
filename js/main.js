@@ -45,10 +45,13 @@ btnOkResposta.addEventListener('click', function ()
         } else if(contResposta == qnt.value) {
             resposta.style.display = "none"
             btnOkResposta.innerHTML = "Reiniciar"
+            contResposta = 0
+            resposta.value = 0
+
         } else if(contResposta >= qnt.value) {
             contResposta = 0
-    
             resposta.value = 0
+            
             intro.style.display = "inline-block"
             resposta.style.display = "inline-flex"
             questoes.remove()
@@ -99,10 +102,7 @@ btnOkIntro.addEventListener('click', function (){
     */
 
     if( min.value != 0 && max.value != 0 && qnt.value != 0) {
-        if(min.value > max.value) {
-            min.value = max.value - 1
-            alert("digite um número menor para o segundo valor")
-        } else {
+        if(min.value < max.value) {
             intro.style.display = 'none'
     
             questoes.style.display = "inline-flex"
@@ -111,6 +111,9 @@ btnOkIntro.addEventListener('click', function (){
     
             gerarQuestao()
             //contResposta++
+        } else {
+            min.value = max.value - 1
+            alert("digite um número menor para o segundo valor")
         }
     } else {
      
