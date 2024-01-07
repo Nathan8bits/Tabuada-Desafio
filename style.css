@@ -21,6 +21,7 @@ p{
     padding: 2%;
     background-color: rgb(0, 145, 145);;
     min-width: 80px;
+    border-radius: 5px;
 }
 
 .container{
