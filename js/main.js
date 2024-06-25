@@ -55,7 +55,7 @@ btnOkResposta.addEventListener('click', function () {
         intro.style.display = "inline-block"
         resposta.style.display = "inline-flex"
         questoes.remove()
-        window.location.reload(true)
+        window.location.reload(true);
     }
     console.log("contResposta: ", contResposta)
 
